@@ -1,10 +1,5 @@
 on:
-  push:
-    branches-ignore:
-      - 'dependabot/**'
-  pull_request:
-  schedule:
-    - cron: '30 13 * * *'
+  workflow_dispatch:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
